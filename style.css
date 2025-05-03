@@ -1,0 +1,122 @@
+/* Estilos generales */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background: linear-gradient(135deg, #0e0e0e, #1a1a1a); /* Fondo oscuro neutro */
+  color: #e0ffe0;
+  line-height: 1.6;
+  text-align: center;
+  padding: 20px;
+  overflow-x: hidden;
+  animation: fadeIn 1s ease-out;
+}
+
+:root {
+  --primary-color: #66ff99;   /* Verde suave */
+  --secondary-color: #33cc77; /* Verde medio */
+  --highlight-color: #aaffcc; /* Verde claro */
+  --button-bg: #33cc77;
+  --button-hover: #2daa66;
+  --box-bg: #1e1e1e;
+}
+
+/* Animaciones */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes buttonPulse {
+  0% { transform: scale(1); }
+  100% { transform: scale(1.05); }
+}
+
+/* Logo */
+.logo {
+  width: 90px;
+  height: auto;
+  margin-bottom: 10px;
+  filter: drop-shadow(0 0 5px var(--primary-color));
+}
+
+/* Encabezado */
+header {
+  margin-bottom: 30px;
+}
+
+header h1 {
+  font-size: 3rem;
+  color: var(--primary-color);
+  margin-bottom: 10px;
+}
+
+.intro {
+  font-size: 1.3rem;
+  color: var(--highlight-color);
+}
+
+/* Cajas de contenido */
+.message-box {
+  background-color: var(--box-bg);
+  padding: 25px;
+  margin-bottom: 30px;
+  border-radius: 12px;
+  box-shadow: 0 0 12px rgba(102, 255, 153, 0.15);
+  transition: transform 0.3s ease;
+}
+
+.message-box:hover {
+  transform: translateY(-5px);
+}
+
+/* Títulos de sección */
+h2 {
+  font-size: 2rem;
+  color: var(--primary-color);
+  margin-bottom: 15px;
+}
+
+/* Textos */
+p, li {
+  font-size: 1.1rem;
+  color: #d8ffd8;
+}
+
+/* Lista personalizada */
+ul {
+  list-style: none;
+  padding: 0;
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+li::before {
+  content: "✅ ";
+  color: var(--primary-color);
+  margin-right: 8px;
+}
+
+/* Botón Discord */
+.discord-btn {
+  display: inline-block;
+  padding: 14px 28px;
+  background-color: var(--button-bg);
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.1rem;
+  border-radius: 6px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  animation: buttonPulse 2s infinite alternate;
+}
+
+.discord-btn:hover {
+  background-color: var(--button-hover);
+  transform: scale(1.03);
+  box-shadow: 0 0 12px rgba(102, 255, 153, 0.3);
+}
